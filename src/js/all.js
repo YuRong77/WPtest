@@ -123,7 +123,7 @@ const app = new Vue({
       this.$refs.checkout.play();
     },
     chooseAim(num) {
-      this.$refs.mouse.style.backgroundImage = `url(img/aim${num}.png)`;
+      this.$refs.mouse.style.backgroundImage = `url(../img/aim${num}.png)`;
       this.bulletQty = 12 + num * 2;
       this.reload();
     },

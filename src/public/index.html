@@ -32,7 +32,7 @@
           </div>
           <ul class="bullet">
             <li v-for="n in bulletQty">
-              <img src="<%= require('./img/bullet.png')%>" alt="" />
+              <img src="../img/bullet.png" alt="" />
             </li>
           </ul>
           <div class="countdown" v-if="countdown > 0">{{countdown}}</div>
@@ -72,12 +72,12 @@
           <h3>商店</h3>
           <ul>
             <li>
-              <img src="<%= require('./img/aim0.png')%>" alt="" />
+              <img src="../img/aim0.png" alt="" />
               <p>預設</p>
               <button class="chooseAim" @click="chooseAim(0)">選擇</button>
             </li>
             <li>
-              <img src="<%= require('./img/aim1.png')%>" alt="" />
+              <img src="../img/aim1.png" alt="" />
               <p>20點</p>
               <button class="buyAim" @click="buyAim(1,20)" v-if="!aimStatus[1]">
                 購買
@@ -91,7 +91,7 @@
               </button>
             </li>
             <li>
-              <img src="<%= require('./img/aim2.png')%>" alt="" />
+              <img src="../img/aim2.png" alt="" />
               <p>40點</p>
               <button class="buyAim" @click="buyAim(2,40)" v-if="!aimStatus[2]">
                 購買
@@ -119,10 +119,10 @@
           </div>
         </div>
       </div>
-      <audio class="gun" src="<%= require('./sound/shoot.mp3')%>" ref="gun"></audio>
-      <audio class="reload" src="<%= require('./sound/reload.mp3')%>" ref="reloadAudio"></audio>
-      <audio class="bgMusic" src="<%= require('./sound/bgmusic.mp3')%>" ref="bgMusic"></audio>
-      <audio class="checkout" src="<%= require('./sound/checkout.mp3')%>" ref="checkout"></audio>
+      <audio class="gun" src="../sound/shoot.mp3" ref="gun"></audio>
+      <audio class="reload" src="../sound/reload.mp3" ref="reloadAudio"></audio>
+      <audio class="bgMusic" src="../sound/bgmusic.mp3" ref="bgMusic"></audio>
+      <audio class="checkout" src="../sound/checkout.mp3" ref="checkout"></audio>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </body>

@@ -16,8 +16,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       // 創建實例 (第二步)
-      template: "./index.html", // 配置 HTML 模板路徑與生成名稱 (第三步)
-      filename: "./index.html",
+      template: "./public/index.html", // 配置 HTML 模板路徑與生成名稱 (第三步)
+      filename: "./app/index.html",
     }),
   ],
   module: {
@@ -36,31 +36,35 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
+      {
         test: /\.mp3$/,
         use: {
-          loader: 'file-loader',
+          loader: "file-loader",
           options: {
-            name: '[name].[ext]',
-            outputPath: 'sound',
-            publicPath: 'sound',
+            name: "[name].[ext]",
+            outputPath: "sound",
+            publicPath: "../sound",
             emitFile: true,
-            esModule: false
+            esModule: false,
           },
-        }
+        },
       },
       {
         test: /\.(png|jpg|gif)$/,
         use: {
-          loader: 'url-loader',
+          loader: "file-loader",
           options: {
-            name: '[name].[ext]',
-            outputPath: 'img',
-            publicPath: 'img',
-            limit: 10,
+            name: "[name].[ext]",
+            outputPath: "img",
+            publicPath: "../img",
+            // limit: 1,
             emitFile: true,
-            esModule: false
-          }
-        }
+            esModule: false,
+          },
+        },
       },
     ],
   },
